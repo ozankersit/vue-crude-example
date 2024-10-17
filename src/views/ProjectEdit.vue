@@ -24,9 +24,9 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
-import { useRoute } from 'vue-router';
 import Layout from '../components/Layout.vue';
 import { useRouter } from 'vue-router';
+import { useRoute } from 'vue-router';
 import axios from 'axios';
 
 type ProjectTypes = {
@@ -40,6 +40,7 @@ const project = ref<ProjectTypes>({
     description: ''
 });
 const route = useRoute();
+const router = useRouter();
 const projectId = ref<string | null>(null);
 
 const API_URL = 'https://mock-api.binaryboxtuts.com/api/projects/'
